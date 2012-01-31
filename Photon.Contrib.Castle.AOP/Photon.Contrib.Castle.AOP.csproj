@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08E35CE5-AB97-4360-9D9C-DA8B396FC9D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Photon.Contrib.Castle.AOP</RootNamespace>
+    <AssemblyName>Photon.Contrib.Castle.AOP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Castle 2.5.3\dotNet40\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Facilities.Logging, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Castle 2.5.3\dotNet40\loggingFacility\Castle.Facilities.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Castle 2.5.3\dotNet40\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspectContainerConfiguration.cs" />
+    <Compile Include="AspectFacility.cs" />
+    <Compile Include="AspectInterceptor.cs" />
+    <Compile Include="BaseAspects.cs" />
+    <Compile Include="ExtraMethodInfo.cs" />
+    <Compile Include="IAspect.cs" />
+    <Compile Include="IAspectFactory.cs" />
+    <Compile Include="IAspectRequiresConfiguration.cs" />
+    <Compile Include="IAspectSelector.cs" />
+    <Compile Include="KernalAspectFactory.cs" />
+    <Compile Include="LoggerFactory.cs" />
+    <Compile Include="Logging\ComponentRegistrationExtentions.cs" />
+    <Compile Include="Logging\ILoggingConfigurer.cs" />
+    <Compile Include="Logging\ILoggingOutputOptions.cs" />
+    <Compile Include="Logging\LoggingAspect.cs" />
+    <Compile Include="Logging\LoggingAspectConfigurationSection.cs" />
+    <Compile Include="Logging\LoggingAspectSelector.cs" />
+    <Compile Include="Logging\LoggingConfiguration.cs" />
+    <Compile Include="Logging\LoggingOutputOptions.cs" />
+    <Compile Include="Logging\MethodCallLogBuilder.cs" />
+    <Compile Include="MethodInvocationContext.cs" />
+    <Compile Include="MethodVoteOptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

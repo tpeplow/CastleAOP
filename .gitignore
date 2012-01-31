@@ -1,0 +1,10 @@
+\bin
+\obj
+\SuggestedStructureTest
+\_ReSharper*
+*.user
+notes.txt
+*.suo
+.DS_Store
+*.vspscc
+*.vssscc
